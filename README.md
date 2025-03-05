@@ -1,6 +1,6 @@
-# React PIN Code
+# React OTP Input
 
-A customizable PIN code input component for React applications with TypeScript support.
+A customizable OTP (One-Time Password) input component for React applications with TypeScript support.
 
 ## Features
 
@@ -18,24 +18,24 @@ A customizable PIN code input component for React applications with TypeScript s
 ## Installation
 
 ```bash
-npm install react-pin-code
+npm install react-otp-input
 # or
-yarn add react-pin-code
+yarn add react-otp-input
 ```
 
 ## Usage
 
 ```tsx
-import { PinCode } from 'react-pin-code';
+import { PinCode } from 'react-otp-input';
 
 function App() {
   const handleComplete = (value: string) => {
-    console.log('PIN completed:', value);
+    console.log('OTP completed:', value);
   };
 
   return (
     <PinCode
-      length={4}
+      length={6}
       onComplete={handleComplete}
       onChange={(value) => console.log('Current value:', value)}
       placeholder="○"
@@ -70,7 +70,7 @@ function App() {
 
 ```tsx
 import { useForm, Controller } from 'react-hook-form';
-import { PinCode } from 'react-pin-code';
+import { PinCode } from 'react-otp-input';
 
 function Form() {
   const { control, handleSubmit } = useForm({
