@@ -18,15 +18,15 @@ A customizable OTP (One-Time Password) input component for React applications wi
 ## Installation
 
 ```bash
-npm install react-otp-input
+npm install @thiengo105/react-otp-input
 # or
-yarn add react-otp-input
+yarn add @thiengo105/react-otp-input
 ```
 
 ## Usage
 
 ```tsx
-import { OtpInput } from 'react-otp-input';
+import { OtpInput } from '@thiengo105/react-otp-input';
 
 function App() {
   const handleComplete = (value: string) => {
@@ -119,6 +119,14 @@ npm run build
 # Run tests
 npm test
 ```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+## Support
+
+If you have any questions or need help with integration, please open an issue on GitHub.
 
 ## License
 
