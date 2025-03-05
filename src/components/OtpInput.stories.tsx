@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PinCode } from './PinCode';
+import { OtpInput } from './OtpInput';
 import { useForm, Controller } from 'react-hook-form';
 import React from 'react';
 
 const meta = {
-  title: 'Components/PinCode',
-  component: PinCode,
+  title: 'Components/OtpInput',
+  component: OtpInput,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof PinCode>;
+} satisfies Meta<typeof OtpInput>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -64,22 +64,22 @@ export const WithReactHookForm: Story = {
     const FormExample = () => {
       const { control, handleSubmit } = useForm({
         defaultValues: {
-          pin: ''
+          otp: ''
         }
       });
 
-      const onSubmit = (data: { pin: string }) => {
-        alert(`Submitted PIN: ${data.pin}`);
+      const onSubmit = (data: { otp: string }) => {
+        alert(`Submitted OTP: ${data.otp}`);
       };
 
       return (
         <form onSubmit={handleSubmit(onSubmit)}>
           <Controller
-            name="pin"
+            name="otp"
             control={control}
             rules={{ required: true, minLength: 4 }}
             render={({ field }) => (
-              <PinCode
+              <OtpInput
                 length={4}
                 value={field.value}
                 onChange={field.onChange}

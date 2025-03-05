@@ -1,2 +1,2 @@
-export { PinCode } from './components/PinCode';
-export type { PinCodeProps } from './components/PinCode'; 
+export { OtpInput } from './components/OtpInput';
+export type { OtpInputProps } from './components/OtpInput'; 
