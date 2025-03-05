@@ -4,13 +4,26 @@
   "description": "A customizable PIN code input component for React applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiengo/react-pin-code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thiengo/react-pin-code/issues"
+  },
+  "homepage": "https://github.com/thiengo/react-pin-code#readme",
   "scripts": {
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src --ext .ts,.tsx",
     "prepare": "npm run build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "react",
@@ -18,13 +31,16 @@
     "code",
     "input",
     "typescript",
-    "component"
+    "component",
+    "form",
+    "security",
+    "authentication"
   ],
   "author": "Thien Ngo <thiengo105@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
