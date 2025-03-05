@@ -1,5 +1,5 @@
 {
-  "name": "react-pin-code",
+  "name": "react-otp-input",
   "version": "1.0.0",
   "description": "A customizable PIN code input component for React applications",
   "main": "dist/index.js",
@@ -10,12 +10,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thiengo/react-pin-code.git"
+    "url": "git+https://github.com/thiengo/react-otp-input.git"
   },
   "bugs": {
-    "url": "https://github.com/thiengo/react-pin-code/issues"
+    "url": "https://github.com/thiengo/react-otp-input/issues"
   },
-  "homepage": "https://github.com/thiengo/react-pin-code#readme",
+  "homepage": "https://github.com/thiengo/react-otp-input#readme",
   "scripts": {
     "build": "tsc",
     "test": "jest",
