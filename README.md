@@ -26,7 +26,7 @@ yarn add react-otp-input
 ## Usage
 
 ```tsx
-import { PinCode } from 'react-otp-input';
+import { OtpInput } from 'react-otp-input';
 
 function App() {
   const handleComplete = (value: string) => {
@@ -34,7 +34,7 @@ function App() {
   };
 
   return (
-    <PinCode
+    <OtpInput
       length={6}
       onComplete={handleComplete}
       onChange={(value) => console.log('Current value:', value)}
@@ -70,27 +70,27 @@ function App() {
 
 ```tsx
 import { useForm, Controller } from 'react-hook-form';
-import { PinCode } from 'react-otp-input';
+import { OtpInput } from 'react-otp-input';
 
 function Form() {
   const { control, handleSubmit } = useForm({
     defaultValues: {
-      pin: ''
+      otp: ''
     }
   });
 
-  const onSubmit = (data: { pin: string }) => {
-    console.log('PIN:', data.pin);
+  const onSubmit = (data: { otp: string }) => {
+    console.log('OTP:', data.otp);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Controller
-        name="pin"
+        name="otp"
         control={control}
         rules={{ required: true, minLength: 4 }}
         render={({ field }) => (
-          <PinCode
+          <OtpInput
             length={4}
             value={field.value}
             onChange={field.onChange}
